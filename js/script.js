@@ -73,8 +73,7 @@ $(document).ready(function () {
         context.drawImage(video, 0, 0);
         $('#vid').css('z-index', '20');
         $('#capture').css('z-index', '30');
-        if (count <= 3) { 
-            console.log(count);  
+        if (count <= 3) {  
             $('.face-thumbnail .face-wrap').eq(count).find('img').attr('src', $('#canvas')[0].toDataURL());
             count++;
         }
