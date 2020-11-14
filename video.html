@@ -12,45 +12,38 @@
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <header class="top-navigation">
-            <a href="#" class="logo"><img src="./images/logo-guise.png" alt=""></a>
-        </header>
-        <div class="main-body">
-            <div class="camera_wrap">
-                <footer class="main-footer">
-            <p class="copyright-text">Powered by guise.ai. &copy; Copyright 2020. All Right are reserved.</p>
-        </footer>
-                    <div id="wrap"> 
-                            <div id='cont'> 
-                                <div id="vid" class='son'>
-                                    <video id='video'></video>
-                                </div>
+        <div class="camera_wrap">
+                <a href="#" class="logo"><img src="./images/logo-guise.png" alt=""></a>
+            <footer class="main-footer">
+                <p class="copyright-text">Powered by guise.ai. &copy; Copyright 2020. All Right are reserved.</p>
+            </footer>
+            <div id="wrap">
+                <div id='cont'>
+                    <div id="vid" class='son'>
+                        <video id='video'></video>
+                    </div>
 
-                                <div id="capture" class='son'>
-                                    <canvas id='canvas'></canvas>
-                                    <canvas id='blank' style='display:none;'></canvas>
-                                </div>
+                    <div id="capture" class='son'>
+                        <canvas id='canvas'></canvas>
+                        <canvas id='blank' style='display:none;'></canvas> 
+                    </div>
 
-                                <div id="control">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-4"><a id='retake' class='btn btn-block m-1 hov'><i
-                                                        class="fa fa-retweet"></i></a></div>
-                                            <div class="col-4"><a id='snap' class='btn btn-block m-1 hov'><i
-                                                        class="fa fa-camera"></i></a></div>
-                                            <div class="col-4"><a id='close' class='btn btn-block m-1 hov'><i
-                                                        class="fa fa-times"></i></a></div> 
-                                        </div>
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        
+                    <div id="control">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4"><a id='retake' class='btn btn-block m-1 hov'><i
+                                            class="fa fa-retweet"></i></a></div>
+                                <div class="col-4"><a id='snap' class='btn btn-block m-1 hov'><i
+                                            class="fa fa-camera"></i></a></div>
+                                <div class="col-4"><a id='close' class='btn btn-block m-1 hov'><i
+                                            class="fa fa-times"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> 
+            <div class="face-detector"><span class="user_name">Aditya</span></div>
         </div>
-        
-    </div>
     <script src="./js/jquery-2.2.3.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
