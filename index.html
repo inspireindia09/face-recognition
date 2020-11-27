@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Face Recoginition</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <section class="body_wrap">
+            <div class="body-text">
+                <p class="copyright-text">Powered by guise.ai. &copy; Copyright 2020. All Right are
+                    reserved.</p>
+                <a href="/" class="logo"><img src="./images/logo-guise.png" alt=""></a>
+            </div>
+            <video id="video" width="768" autoplay></video>
+            <span id="snap" class="fa fa-camera"></span>
+            <canvas id="canvas" hidden width="640" height="480"></canvas>
+        </section>
+
+
+        <div class="face-thumbnail">
+            <div class="face-wrap">
+                <img src="" alt="">
+            </div>
+            <div class="face-wrap">
+                <img src="" alt="">
+            </div>
+            <div class="face-wrap">
+                <img src="" alt="">
+            </div>
+            <div class="face-wrap">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div class="register-form">
+            <div class="custom-form">
+                <input type="text" class="form-input" placeholder="Your Name">
+                <label for="">Your Name</label>
+            </div>
+            <div class="custom-form">
+                <input type="text" class="form-input" placeholder="Your Name">
+                <label for="">Your Name</label>
+            </div>
+        </div>
+        <div class="button-group">
+            <a href="video.html" class="btn btn-primary">Register</a>
+            <a download="profilePic.png" id="download" class="btn btn-success" href="">Download</a>
+
+        </div>
+    </div>
+
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
+
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+                //video.src = window.URL.createObjectURL(stream);
+                video.srcObject = stream;
+                video.play();
+            });
+        }
+
+        // Elements for taking the snapshot
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var video = document.getElementById('video');
+
+        // Trigger photo take
+        document.getElementById("snap").addEventListener("click", function () {
+            context.drawImage(video, 0, 0, 640, 480);
+        });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
